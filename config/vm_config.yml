@@ -1,0 +1,9 @@
+box:
+    name: bento/ubuntu-16.04
+vm:
+    name: web-environment
+    hostname: web.env
+    memory: 1024
+    cpus: 1
+    network:
+        private_network: 192.168.57.101
