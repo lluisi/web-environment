@@ -7,3 +7,6 @@
 [submodule "roles/mysql"]
 	path = roles/mysql
 	url = https://github.com/geerlingguy/ansible-role-mysql.git
+[submodule "roles/composer"]
+	path = roles/composer
+	url = https://github.com/geerlingguy/ansible-role-composer
