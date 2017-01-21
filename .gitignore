@@ -5,3 +5,4 @@
 **/.vagrant/
 playbook.retry
 config/synced_folder.yml
+config/host_aliases.yml
