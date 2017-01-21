@@ -4,17 +4,17 @@ require 'yaml'
 dir = File.dirname(File.expand_path(__FILE__))
 
 if !File.file?("#{dir}/config/vm_config.yml")
-  print "Please rename and configure #{dir}/config/vm_config_sample.yml to #{dir}/config/vm_config.yml to continue\n"
+  print "Please rename and configure #{dir}/config/sample/vm_config_sample.yml to #{dir}/config/vm_config.yml to continue\n"
   exit
 end
 
 if !File.file?("#{dir}/config/synced_folder.yml")
-  print "Please rename and configure #{dir}/config/synced_folder_sample.yml to #{dir}/config/synced_folder.yml to continue\n"
+  print "Please rename and configure #{dir}/config/sample/synced_folder_sample.yml to #{dir}/config/synced_folder.yml to continue\n"
   exit
 end
 
 if !File.file?("#{dir}/config/host_aliases.yml")
-  print "Please rename and configure #{dir}/config/host_aliases_sample.yml to #{dir}/config/host_aliases.yml to continue\n"
+  print "Please rename and configure #{dir}/config/sample/host_aliases_sample.yml to #{dir}/config/host_aliases.yml to continue\n"
   exit
 end
 
