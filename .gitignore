@@ -4,3 +4,4 @@
 /.dist/
 **/.vagrant/
 playbook.retry
+config/synced_folder.yml
