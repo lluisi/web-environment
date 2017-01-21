@@ -3,7 +3,10 @@ Vagrant.require_version ">= 1.9.0"
 require 'yaml'
 dir = File.dirname(File.expand_path(__FILE__))
 
-vm_config = YAML.load_file("#{dir}/config/vm_config.yml")
+if !File.file?("#{dir}/config/vm_config.yml")
+  print "Please rename and configure #{dir}/config/vm_config_sample.yml to #{dir}/config/vm_config.yml to continue\n"
+  exit
+end
 
 if !File.file?("#{dir}/config/synced_folder.yml")
   print "Please rename and configure #{dir}/config/synced_folder_sample.yml to #{dir}/config/synced_folder.yml to continue\n"
@@ -15,6 +18,7 @@ if !File.file?("#{dir}/config/host_aliases.yml")
   exit
 end
 
+vm_config = YAML.load_file("#{dir}/config/vm_config.yml")
 synced_folder = YAML.load_file("#{dir}/config/synced_folder.yml")
 host_aliases = YAML.load_file("#{dir}/config/host_aliases.yml")
 
