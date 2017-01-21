@@ -4,6 +4,6 @@
 /.dist/
 **/.vagrant/
 playbook.retry
-config/vm_config.yml
-config/synced_folder.yml
-config/host_aliases.yml
+config/*
+!config/sample/*
+!config/vars/.gitkeep
