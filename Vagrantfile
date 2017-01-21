@@ -10,7 +10,13 @@ if !File.file?("#{dir}/config/synced_folder.yml")
   exit
 end
 
+if !File.file?("#{dir}/config/host_aliases.yml")
+  print "Please rename and configure #{dir}/config/host_aliases_sample.yml to #{dir}/config/host_aliases.yml to continue\n"
+  exit
+end
+
 synced_folder = YAML.load_file("#{dir}/config/synced_folder.yml")
+host_aliases = YAML.load_file("#{dir}/config/host_aliases.yml")
 
 Vagrant.configure(2) do |config|
 
@@ -46,6 +52,20 @@ Vagrant.configure(2) do |config|
     if folder['source'] != '' && folder['target'] != ''
       config.vm.synced_folder "#{folder['source']}", "#{folder['target']}", id: "#{i}", type: "#{folder['type']}"
     end
+  end
+
+  if Vagrant.has_plugin?('vagrant-hostmanager')
+    hosts = Array.new()
+    host_aliases.each do |host_alias|
+      hosts.push(host_alias)
+    end
+
+    config.hostmanager.enabled = true
+    config.hostmanager.manage_host = true
+    config.hostmanager.manage_guest = false
+    config.hostmanager.ignore_private_ip = false
+    config.hostmanager.include_offline = true
+    config.hostmanager.aliases = hosts
   end
 
 end
