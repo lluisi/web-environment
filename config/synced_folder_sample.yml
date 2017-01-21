@@ -1,0 +1,9 @@
+my-project-a:
+    type: nfs
+    source: ../my-project-a
+    target: /var/www/my-project-a
+
+my-project-b:
+    type: nfs
+    source: ../my-project-b
+    target: /var/www/my-project-b
