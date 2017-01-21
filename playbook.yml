@@ -1,0 +1,9 @@
+---
+- hosts: all
+  vars:
+     php_webserver_daemon: "nginx"
+  roles:
+     - role: php
+     - role: nginx
+     - role: mysql
+     - role: composer
