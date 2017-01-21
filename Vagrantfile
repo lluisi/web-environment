@@ -5,6 +5,13 @@ dir = File.dirname(File.expand_path(__FILE__))
 
 vm_config = YAML.load_file("#{dir}/config/vm_config.yml")
 
+if !File.file?("#{dir}/config/synced_folder.yml")
+  print "Please rename and configure #{dir}/config/synced_folder_sample.yml to #{dir}/config/synced_folder.yml to continue\n"
+  exit
+end
+
+synced_folder = YAML.load_file("#{dir}/config/synced_folder.yml")
+
 Vagrant.configure(2) do |config|
 
   config.vm.box = "#{vm_config['box']['name']}"
@@ -33,6 +40,12 @@ Vagrant.configure(2) do |config|
     ansible.sudo = true
     ansible.verbose = false
     ansible.limit = 'all'
+  end
+
+  synced_folder.each do |i, folder|
+    if folder['source'] != '' && folder['target'] != ''
+      config.vm.synced_folder "#{folder['source']}", "#{folder['target']}", id: "#{i}", type: "#{folder['type']}"
+    end
   end
 
 end
