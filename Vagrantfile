@@ -28,4 +28,11 @@ Vagrant.configure(2) do |config|
       ]
   end
 
+  config.vm.provision :ansible do |ansible|
+    ansible.playbook = "#{dir}/playbook.yml"
+    ansible.sudo = true
+    ansible.verbose = false
+    ansible.limit = 'all'
+  end
+
 end
