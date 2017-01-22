@@ -2,6 +2,7 @@
 - hosts: all
   vars_files:
      - config/vars/php.yml
+     - config/vars/xdebug.yml
      - config/vars/nginx.yml
      - config/vars/mysql.yml
   roles:
