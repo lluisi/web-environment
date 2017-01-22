@@ -2,7 +2,7 @@
 
 [WIP] A vm provisioned with Ansible ready to be used
 
-### Ingredients
+### Requirements
 
 * [VirtualBox](https://www.virtualbox.org)
 * [Vagrant](https://www.vagrantup.com) 1.9 or later
