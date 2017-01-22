@@ -5,5 +5,5 @@
 **/.vagrant/
 playbook.retry
 config/*
-!config/sample/*
+!config/sample/
 !config/vars/.gitkeep
