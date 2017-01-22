@@ -14,3 +14,4 @@ php_packages:
   - php-xml
   - php-mysql
   - php-fpm
+  - php-dev
