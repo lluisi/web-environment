@@ -1,6 +1,6 @@
 # Web environment
 
-[WIP] A vm provisioned with Ansible ready to be used
+A vm provisioned with Ansible ready to be used
 
 ### Requirements
 
