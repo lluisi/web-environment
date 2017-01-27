@@ -10,6 +10,17 @@ A vm provisioned with Ansible ready to be used
 
 > Ansible is installed into guest machine, it is not required into your host
 
+## Box
+You can use any box defining the name in "vm_config.yml" file.
+
+```
+name: bento/ubuntu-16.04
+```
+optional:
+```
+url: http://of-your-box
+```
+
 ## How to use it
 
 This repo uses other repositories as a git submodules, so to properly clone do the following:
