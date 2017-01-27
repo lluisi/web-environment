@@ -8,6 +8,7 @@ A vm provisioned with Ansible ready to be used
 * [Vagrant](https://www.vagrantup.com) 1.9 or later
 * [Vagrant Host Manager plugin](https://github.com/devopsgroup-io/vagrant-hostmanager)
 
+> Ansible is installed into guest machine, it is not required into your host
 
 ## How to use it
 
