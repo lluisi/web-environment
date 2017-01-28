@@ -6,6 +6,7 @@ nginx_http_params:
 nginx_sites:
     my-project-a:
         - listen 80
+        - listen 443 ssl
         - server_name my-project-a.local
         - root "/var/www/my-project-a/web"
         - index index.php
@@ -15,6 +16,10 @@ nginx_sites:
         - access_log "/var/log/nginx/my-project-a-access.log"
         - error_log "/var/log/nginx/my-project-a-error.log"
 nginx_configs:
+    ssl:
+        - ssl_certificate_key {{ssl_certs_privkey_path}}
+        - ssl_certificate     {{ssl_certs_cert_path}}
+        - ssl_dhparam         {{ssl_certs_dhparam_path}}
     proxy:
         - proxy_set_header X-Real-IP  $remote_addr
         - proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for
