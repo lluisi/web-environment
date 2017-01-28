@@ -1,0 +1,2 @@
+---
+ssl_certs_generate_dh_param: true

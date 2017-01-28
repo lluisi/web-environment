@@ -13,3 +13,6 @@
 [submodule "roles/php-xdebug"]
 	path = roles/php-xdebug
 	url = https://github.com/geerlingguy/ansible-role-php-xdebug.git
+[submodule "roles/ssl-certs"]
+	path = roles/ssl-certs
+	url = https://github.com/jdauphant/ansible-role-ssl-certs.git
