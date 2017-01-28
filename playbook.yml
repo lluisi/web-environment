@@ -4,10 +4,12 @@
      - config/vars/php.yml
      - config/vars/xdebug.yml
      - config/vars/nginx.yml
+     - config/vars/ssl.yml
      - config/vars/mysql.yml
   roles:
      - role: php
      - role: php-xdebug
      - role: nginx
+     - role: ssl-certs
      - role: mysql
      - role: composer
