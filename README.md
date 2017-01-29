@@ -51,7 +51,10 @@ config/sample/vars/php_sample.yml
 config/sample/vars/nginx_sample.yml
 config/sample/vars/mysql_sample.yml
 config/sample/vars/xdebug_sample.yml
+config/sample/vars/ssl_sample.yml
 ```
+
+into *config/*
 
 And finally:
 ```
