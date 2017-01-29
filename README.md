@@ -8,6 +8,18 @@ An ubuntu provisioned by Ansible with the following software:
 * ssl-cert
 * composer
 
+## Box
+
+The box proposed is a [bento/ubuntu-16.04](https://github.com/chef/bento), you can use any box defining it in [vm_config.yml](config/sample/vm_config_sample.yml).
+
+```
+name: bento/ubuntu-16.04
+```
+The URL that the configured box can be found at:
+```
+url: http://of-your-box
+```
+
 ### Requirements
 
 * [VirtualBox](https://www.virtualbox.org)
@@ -16,16 +28,6 @@ An ubuntu provisioned by Ansible with the following software:
 
 > Ansible is installed into guest machine, it is not required into your host
 
-## Box
-You can use any box defining the name in [vm_config.yml](config/sample/vm_config_sample.yml) file.
-
-```
-name: bento/ubuntu-16.04
-```
-optional:
-```
-url: http://of-your-box
-```
 
 ## How to use it
 
