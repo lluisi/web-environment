@@ -1,6 +1,24 @@
 # Web environment
 
-A vm provisioned with Ansible ready to be used
+An ubuntu provisioned by Ansible with the following software:
+* php 7.0
+* nginx 1.10
+* mysql 5.7
+* xdebug
+* ssl-cert
+* composer
+
+## Box
+
+The box proposed is a [bento/ubuntu-16.04](https://github.com/chef/bento), you can use any box defining it in [vm_config.yml](config/sample/vm_config_sample.yml).
+
+```
+name: bento/ubuntu-16.04
+```
+The URL that the configured box can be found at:
+```
+url: http://of-your-box
+```
 
 ### Requirements
 
@@ -10,16 +28,6 @@ A vm provisioned with Ansible ready to be used
 
 > Ansible is installed into guest machine, it is not required into your host
 
-## Box
-You can use any box defining the name in [vm_config.yml](config/sample/vm_config_sample.yml) file.
-
-```
-name: bento/ubuntu-16.04
-```
-optional:
-```
-url: http://of-your-box
-```
 
 ## How to use it
 
@@ -43,7 +51,10 @@ config/sample/vars/php_sample.yml
 config/sample/vars/nginx_sample.yml
 config/sample/vars/mysql_sample.yml
 config/sample/vars/xdebug_sample.yml
+config/sample/vars/ssl_sample.yml
 ```
+
+into *config/*
 
 And finally:
 ```
