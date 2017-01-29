@@ -1,6 +1,12 @@
 # Web environment
 
-A vm provisioned with Ansible ready to be used
+An ubuntu provisioned by Ansible with the following software:
+* php 7.0
+* nginx 1.10
+* mysql 5.7
+* xdebug
+* ssl-cert
+* composer
 
 ### Requirements
 
