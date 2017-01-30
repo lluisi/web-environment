@@ -1,5 +1,7 @@
 # Web environment
 
+This Vagrant profile installs Php, Nginx, MySQL and others, using the Ansible provisioner.
+
 An ubuntu provisioned by Ansible with the following software:
 * php 7.0
 * nginx 1.10
