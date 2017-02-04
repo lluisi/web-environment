@@ -9,7 +9,7 @@
   roles:
      - role: php
      - role: php-xdebug
-     - role: nginx
      - role: ssl-certs
+     - role: nginx
      - role: mysql
      - role: composer
