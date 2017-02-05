@@ -7,3 +7,7 @@
   version: master
   name: php-xdebug
 
+- src: https://github.com/jdauphant/ansible-role-ssl-certs.git
+  version: master
+  name: ssl-certs
+
