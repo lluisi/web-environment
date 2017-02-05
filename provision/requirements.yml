@@ -19,3 +19,7 @@
   version: master
   name: mysql
 
+- src: https://github.com/geerlingguy/ansible-role-composer.git
+  version: master
+  name: composer
+
