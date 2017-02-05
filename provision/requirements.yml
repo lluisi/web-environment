@@ -15,3 +15,7 @@
   version: master
   name: nginx
 
+- src: https://github.com/geerlingguy/ansible-role-mysql.git
+  version: master
+  name: mysql
+
