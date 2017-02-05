@@ -2,3 +2,8 @@
 - src: https://github.com/geerlingguy/ansible-role-php.git
   version: master
   name: php
+
+- src: https://github.com/geerlingguy/ansible-role-php-xdebug.git
+  version: master
+  name: php-xdebug
+
