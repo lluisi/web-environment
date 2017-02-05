@@ -12,7 +12,7 @@ The roles install these software in the guest machine:
 
 ## Box
 
-The box proposed is a [bento/ubuntu-16.04](https://github.com/chef/bento), you can use any box defining it in [vm_config.yml](config/sample/vm_config_sample.yml).
+The box proposed is a [bento/ubuntu-16.04](https://github.com/chef/bento), you can use any box defining it in [vm_config.yml](provision/config/sample/vm_config_sample.yml).
 
 ```
 name: bento/ubuntu-16.04
