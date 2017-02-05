@@ -11,3 +11,7 @@
   version: master
   name: ssl-certs
 
+- src: https://github.com/jdauphant/ansible-role-nginx.git
+  version: master
+  name: nginx
+
