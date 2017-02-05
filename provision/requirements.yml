@@ -1,0 +1,25 @@
+---
+- src: https://github.com/geerlingguy/ansible-role-php.git
+  version: master
+  name: php
+
+- src: https://github.com/geerlingguy/ansible-role-php-xdebug.git
+  version: master
+  name: php-xdebug
+
+- src: https://github.com/jdauphant/ansible-role-ssl-certs.git
+  version: master
+  name: ssl-certs
+
+- src: https://github.com/jdauphant/ansible-role-nginx.git
+  version: master
+  name: nginx
+
+- src: https://github.com/geerlingguy/ansible-role-mysql.git
+  version: master
+  name: mysql
+
+- src: https://github.com/geerlingguy/ansible-role-composer.git
+  version: master
+  name: composer
+

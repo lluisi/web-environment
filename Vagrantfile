@@ -3,24 +3,27 @@ Vagrant.require_version ">= 1.9.0"
 require 'yaml'
 dir = File.dirname(File.expand_path(__FILE__))
 
-if !File.file?("#{dir}/config/vm_config.yml")
-  print "Please rename and configure #{dir}/config/sample/vm_config_sample.yml to #{dir}/config/vm_config.yml to continue\n"
+if !File.file?("#{dir}/provision/config/vm_config.yml")
+  print "Please rename and configure #{dir}/provision/config/sample/vm_config_sample.yml to
+  #{dir}/provision/config/vm_config.yml to continue\n"
   exit
 end
 
-if !File.file?("#{dir}/config/synced_folder.yml")
-  print "Please rename and configure #{dir}/config/sample/synced_folder_sample.yml to #{dir}/config/synced_folder.yml to continue\n"
+if !File.file?("#{dir}/provision/config/synced_folder.yml")
+  print "Please rename and configure #{dir}/provision/config/sample/synced_folder_sample.yml to
+  #{dir}/provision/config/synced_folder.yml to continue\n"
   exit
 end
 
-if !File.file?("#{dir}/config/host_aliases.yml")
-  print "Please rename and configure #{dir}/config/sample/host_aliases_sample.yml to #{dir}/config/host_aliases.yml to continue\n"
+if !File.file?("#{dir}/provision/config/host_aliases.yml")
+  print "Please rename and configure #{dir}/provision/config/sample/host_aliases_sample.yml to
+  #{dir}/provision/config/host_aliases.yml to continue\n"
   exit
 end
 
-vm_config = YAML.load_file("#{dir}/config/vm_config.yml")
-synced_folder = YAML.load_file("#{dir}/config/synced_folder.yml")
-host_aliases = YAML.load_file("#{dir}/config/host_aliases.yml")
+vm_config = YAML.load_file("#{dir}/provision/config/vm_config.yml")
+synced_folder = YAML.load_file("#{dir}/provision/config/synced_folder.yml")
+host_aliases = YAML.load_file("#{dir}/provision/config/host_aliases.yml")
 
 Vagrant.configure(2) do |config|
 
@@ -47,7 +50,8 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision :ansible_local do |ansible|
     ansible.install_mode = "pip"
-    ansible.playbook = "playbook.yml"
+    ansible.galaxy_role_file = "provision/requirements.yml"
+    ansible.playbook = "provision/playbook.yml"
     ansible.sudo = true
     ansible.verbose = false
     ansible.limit = 'all'

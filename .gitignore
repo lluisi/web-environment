@@ -4,6 +4,7 @@
 /.dist/
 **/.vagrant/
 playbook.retry
-config/*
-!config/sample/
-!config/vars/.gitkeep
+provision/config/*
+!provision/config/sample/
+!provision/config/vars/.gitkeep
+provision/roles/*

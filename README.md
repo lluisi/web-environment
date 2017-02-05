@@ -12,7 +12,7 @@ The roles install these software in the guest machine:
 
 ## Box
 
-The box proposed is a [bento/ubuntu-16.04](https://github.com/chef/bento), you can use any box defining it in [vm_config.yml](config/sample/vm_config_sample.yml).
+The box proposed is a [bento/ubuntu-16.04](https://github.com/chef/bento), you can use any box defining it in [vm_config.yml](provision/config/sample/vm_config_sample.yml).
 
 ```
 name: bento/ubuntu-16.04
@@ -33,30 +33,30 @@ url: http://of-your-box
 
 ## How to use it
 
-This repo uses other repositories as a git submodules, so to properly clone do the following:
+Clone the repo:
 
 ```
-git clone --recursive https://github.com/lluisi/web-environment.git && cd web-environment
+git clone https://github.com/lluisi/web-environment.git && cd web-environment
 ```
 
 Rename and configure the following sample files as your needs:
 
 
 ```
-config/sample/vm_config_sample.yml
-config/sample/host_aliases_sample.yml
-config/sample/synced_folder_sample.yml
+provision/config/sample/vm_config_sample.yml
+provision/config/sample/host_aliases_sample.yml
+provision/config/sample/synced_folder_sample.yml
 ```
 
 ```
-config/sample/vars/php_sample.yml
-config/sample/vars/nginx_sample.yml
-config/sample/vars/mysql_sample.yml
-config/sample/vars/xdebug_sample.yml
-config/sample/vars/ssl_sample.yml
+provision/config/sample/vars/php_sample.yml
+provision/config/sample/vars/nginx_sample.yml
+provision/config/sample/vars/mysql_sample.yml
+provision/config/sample/vars/xdebug_sample.yml
+provision/config/sample/vars/ssl_sample.yml
 ```
 
-into *config/*
+into *provision/config/*
 
 And finally:
 ```
