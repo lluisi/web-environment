@@ -7,3 +7,4 @@ playbook.retry
 provision/config/*
 !provision/config/sample/
 !provision/config/vars/.gitkeep
+provision/roles/*
