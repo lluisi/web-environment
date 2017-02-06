@@ -28,7 +28,7 @@ Clone the repo:
 git clone https://github.com/lluisi/web-environment.git && cd web-environment
 ```
 
-Rename and configure the following sample files as your needs:
+Rename and configure the sample files into *provision/config/*
 
 ### vm_config.yml
 
@@ -93,7 +93,6 @@ provision/config/sample/vars/xdebug_sample.yml
 provision/config/sample/vars/ssl_sample.yml
 ```
 
-into *provision/config/*
 
 And finally:
 ```
