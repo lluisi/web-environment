@@ -10,17 +10,6 @@ The roles install these software in the guest machine:
 * ssl-cert
 * composer
 
-## Box
-
-The box proposed is a [bento/ubuntu-16.04](https://github.com/chef/bento), you can use any box defining it in [vm_config.yml](provision/config/sample/vm_config_sample.yml).
-
-```
-name: bento/ubuntu-16.04
-```
-The URL that the configured box can be found at:
-```
-url: http://of-your-box
-```
 
 ### Requirements
 
@@ -41,12 +30,26 @@ git clone https://github.com/lluisi/web-environment.git && cd web-environment
 
 Rename and configure the following sample files as your needs:
 
+### vm_config.yml
 
 ```
 provision/config/sample/vm_config_sample.yml
-provision/config/sample/host_aliases_sample.yml
-provision/config/sample/synced_folder_sample.yml
 ```
+
+```
+box:
+    name: your-box
+    url: http://the-url-of-your-box
+vm:
+    name: web-environment
+    hostname: web.env
+    memory: 1024
+    cpus: 1
+    network:
+        private_network: 192.168.57.101
+```
+
+
 
 ```
 provision/config/sample/vars/php_sample.yml
