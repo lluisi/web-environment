@@ -49,6 +49,18 @@ vm:
         private_network: 192.168.57.101
 ```
 
+### host_aliases.yml
+
+
+```
+provision/config/sample/host_aliases_sample.yml
+```
+Define as many hosts as you need for your own development projects:
+
+```
+- my-project-a.local
+- my-project-b.local
+```
 
 
 ```
