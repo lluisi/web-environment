@@ -35,6 +35,7 @@ Rename and configure the following sample files as your needs:
 ```
 provision/config/sample/vm_config_sample.yml
 ```
+Configure your VM as your needs:
 
 ```
 box:
