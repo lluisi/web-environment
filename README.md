@@ -63,6 +63,27 @@ Define as many hosts as you need for your own development projects:
 - my-project-b.local
 ```
 
+### host_synced_folder.yml
+
+```
+provision/config/sample/synced_folder_sample.yml
+```
+Sync your local folders with your VM:
+
+```
+my-project-a:
+    type: nfs
+    source: ../my-project-a
+    target: /var/www/my-project-a
+
+my-project-b:
+    type: nfs
+    source: ../my-project-b
+    target: /var/www/my-project-b
+```
+
+### Variables
+
 
 ```
 provision/config/sample/vars/php_sample.yml
