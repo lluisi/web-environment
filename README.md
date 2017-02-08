@@ -28,7 +28,9 @@ Clone the repo:
 git clone https://github.com/lluisi/web-environment.git && cd web-environment
 ```
 
-Rename and configure the sample files into *provision/config/*
+## Configuration
+
+> Rename and configure sample files into *provision/config/*
 
 ### vm_config.yml
 
