@@ -8,7 +8,7 @@ The roles install these software in the guest machine:
 * mysql 5.7 => [geerlingguy/ansible-role-mysql](https://github.com/geerlingguy/ansible-role-mysql)
 * xdebug => [geerlingguy/ansible-role-php-xdebug](https://github.com/geerlingguy/ansible-role-php-xdebug)
 * ssl-cert => [jdauphant/ansible-role-ssl-certs](https://github.com/jdauphant/ansible-role-ssl-certs)
-* composer
+* composer => [geerlingguy/ansible-role-composer](https://github.com/geerlingguy/ansible-role-composer)
 
 
 ### Requirements
