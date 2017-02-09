@@ -3,12 +3,12 @@
 This Vagrant profile installs Php, Nginx, MySQL and others, using the Ansible provisioner.
 
 The roles install these software in the guest machine:
-* php 7.0
-* nginx 1.10
-* mysql 5.7
-* xdebug
-* ssl-cert
-* composer
+* php 7.0 => [geerlingguy/ansible-role-php](https://github.com/geerlingguy/ansible-role-php)
+* nginx 1.10 => [jdauphant/ansible-role-nginx](https://github.com/jdauphant/ansible-role-nginx)
+* mysql 5.7 => [geerlingguy/ansible-role-mysql](https://github.com/geerlingguy/ansible-role-mysql)
+* xdebug => [geerlingguy/ansible-role-php-xdebug](https://github.com/geerlingguy/ansible-role-php-xdebug)
+* ssl-cert => [jdauphant/ansible-role-ssl-certs](https://github.com/jdauphant/ansible-role-ssl-certs)
+* composer => [geerlingguy/ansible-role-composer](https://github.com/geerlingguy/ansible-role-composer)
 
 
 ### Requirements
