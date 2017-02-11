@@ -7,9 +7,9 @@
      - config/vars/ssl.yml
      - config/vars/mysql.yml
   roles:
-     - role: php
-     - role: php-xdebug
-     - role: ssl-certs
-     - role: nginx
-     - role: mysql
-     - role: composer
+     - php
+     - php-xdebug
+     - ssl-certs
+     - nginx
+     - mysql
+     - composer
