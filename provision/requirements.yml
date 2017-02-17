@@ -26,3 +26,7 @@
 - src: https://github.com/DavidWittman/ansible-redis.git
   version: master
   name: redis
+
+- src: https://github.com/UnderGreen/ansible-role-mongodb.git
+  version: master
+  name: mongodb
