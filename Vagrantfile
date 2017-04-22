@@ -50,6 +50,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision :ansible_local do |ansible|
     ansible.install_mode = "pip"
+    ansible.version = "2.2.1.0"
     ansible.galaxy_role_file = "provision/requirements.yml"
     ansible.playbook = "provision/playbook.yml"
     ansible.sudo = true
